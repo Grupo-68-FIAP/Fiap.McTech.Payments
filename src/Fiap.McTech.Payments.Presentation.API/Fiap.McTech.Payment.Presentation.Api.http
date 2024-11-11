@@ -1,0 +1,6 @@
+@Fiap.McTech.Payments.Presentation.Api_HostAddress = http://localhost:5178
+
+GET {{Fiap.McTech.Payments.Presentation.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
