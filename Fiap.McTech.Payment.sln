@@ -27,13 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Infra.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.UnitTests", "tests\Fiap.McTech.Payments.UnitTests\Fiap.McTech.Payments.UnitTests.csproj", "{F185E3CF-4022-4516-BA20-A8B86713DA93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.BDD", "tests\Fiap.McTech.Payments.BDD\Fiap.McTech.Payments.BDD.csproj", "{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{20395880-CF38-4659-8B49-7E6589057E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -76,6 +75,13 @@ Global
 		{F185E3CF-4022-4516-BA20-A8B86713DA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F185E3CF-4022-4516-BA20-A8B86713DA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F185E3CF-4022-4516-BA20-A8B86713DA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{20395880-CF38-4659-8B49-7E6589057E8E} = {5CBF8AF8-2D31-448B-B4AE-10ADA6E78BF4}
@@ -88,5 +94,9 @@ Global
 		{C2F52E9F-77C8-406F-ACEF-69EA68C5C03E} = {06EED5C7-885B-4612-AD90-925C9A0E9829}
 		{5D975353-9118-4606-8DF8-FA357F0A27C0} = {06EED5C7-885B-4612-AD90-925C9A0E9829}
 		{F185E3CF-4022-4516-BA20-A8B86713DA93} = {06EED5C7-885B-4612-AD90-925C9A0E9829}
+		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4} = {06EED5C7-885B-4612-AD90-925C9A0E9829}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6543820-8956-4FED-A4C0-0EF5F2F5B1E5}
 	EndGlobalSection
 EndGlobal
