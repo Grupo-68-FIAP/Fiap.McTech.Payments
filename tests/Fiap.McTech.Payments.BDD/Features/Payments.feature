@@ -1,12 +1,6 @@
-#coding:utf-8
+﻿Feature: Gerar QR-Code para pagamento
 
-Feature: Gerar QR-Code para pagamento
-	Given um usu�rio
-	deve ser capaz de gerar um c�digo QR-Code
-	para efetuar o pagamento do mesmo
-
-	Scenario: Gerar um QR-Code para pagamento
-		Given que eu tenho os dados v�lidos para gerar um QR-Code para pagamento
-		When eu solicitar para a rota gerar o QR-Code
+	Scenario: Gerar_QRCode_Pagamento
+		Given que o valor de OrderId é um UUID e que os dados do objeto da requisição sejam ficticios
+		When eu solicitar para o método GenerateQRCode e passar os parâmetros
 		Then o status de resposta deve ser 200 OK
-		And o pagamento deve ser registrado no sistema

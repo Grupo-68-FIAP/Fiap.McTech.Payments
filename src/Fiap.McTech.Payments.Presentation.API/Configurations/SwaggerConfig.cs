@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace Fiap.McTech.Payments.Presentation.API.Configurations
@@ -6,6 +7,7 @@ namespace Fiap.McTech.Payments.Presentation.API.Configurations
     /// <summary>
     /// Swagger configuration class.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     internal static class SwaggerConfig
     {
         /// <summary>
