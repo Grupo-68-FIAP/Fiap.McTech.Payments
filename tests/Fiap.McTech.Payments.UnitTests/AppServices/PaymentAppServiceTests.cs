@@ -34,7 +34,8 @@ namespace Fiap.McTech.UnitTests.AppServices
         {
             // Arrange
             var orderId = Guid.NewGuid();
-            var model = new PaymentInputDto{
+            var model = new PaymentInputDto
+            {
                 OrderId = orderId,
                 TotalAmount = 100.0m,
                 Client = new PaymentInputDto.ClientDto
@@ -94,7 +95,7 @@ namespace Fiap.McTech.UnitTests.AppServices
             _mockMercadoPagoService.Setup(service => service.ProcessPaymentAsync(paymentId)).ReturnsAsync(true);
 
             // Act
-            var result = await _paymentAppService.UpdatePayment(paymentId, "completed");
+            var result = await _paymentAppService.UpdatePayment(paymentId, "Completo");
 
             // Assert
             Assert.True(result.Success);
@@ -109,7 +110,7 @@ namespace Fiap.McTech.UnitTests.AppServices
             var paymentId = Guid.NewGuid();
 
             // Act
-            var result = await _paymentAppService.UpdatePayment(paymentId, "completed");
+            var result = await _paymentAppService.UpdatePayment(paymentId, "Completo");
 
             // Assert
             Assert.False(result.Success);
@@ -127,7 +128,7 @@ namespace Fiap.McTech.UnitTests.AppServices
             _mockMercadoPagoService.Setup(service => service.ProcessPaymentAsync(paymentId)).ReturnsAsync(false);
 
             // Act
-            var result = await _paymentAppService.UpdatePayment(paymentId, "completed");
+            var result = await _paymentAppService.UpdatePayment(paymentId, "Completo");
 
             // Assert
             Assert.False(result.Success);

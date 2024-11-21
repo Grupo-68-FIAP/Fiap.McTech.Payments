@@ -1,9 +1,11 @@
 ﻿using Fiap.McTech.Payments.CrossCutting.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Mime;
 
 namespace Fiap.McTech.Payments.Presentation.API.Handlers
 {
+    [ExcludeFromCodeCoverage]
     internal class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;

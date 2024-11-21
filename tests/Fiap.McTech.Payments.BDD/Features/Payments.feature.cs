@@ -19,7 +19,7 @@ namespace Fiap.McTech.Payments.BDD.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GerarQR_CodeParaPagamentoFeature : object, Xunit.IClassFixture<GerarQR_CodeParaPagamentoFeature.FixtureData>, System.IDisposable
+    public partial class AcoesDeGerarEAtualizarUmPagamentoFeature : object, Xunit.IClassFixture<AcoesDeGerarEAtualizarUmPagamentoFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Fiap.McTech.Payments.BDD.Features
 #line 1 "Payments.feature"
 #line hidden
         
-        public GerarQR_CodeParaPagamentoFeature(GerarQR_CodeParaPagamentoFeature.FixtureData fixtureData, Fiap_McTech_Payments_BDD_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public AcoesDeGerarEAtualizarUmPagamentoFeature(AcoesDeGerarEAtualizarUmPagamentoFeature.FixtureData fixtureData, Fiap_McTech_Payments_BDD_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace Fiap.McTech.Payments.BDD.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Gerar QR-Code para pagamento", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ações de gerar e atualizar um pagamento", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,7 +81,7 @@ namespace Fiap.McTech.Payments.BDD.Features
         }
         
         [Xunit.SkippableFactAttribute(DisplayName="Gerar_QRCode_Pagamento")]
-        [Xunit.TraitAttribute("FeatureTitle", "Gerar QR-Code para pagamento")]
+        [Xunit.TraitAttribute("FeatureTitle", "Ações de gerar e atualizar um pagamento")]
         [Xunit.TraitAttribute("Description", "Gerar_QRCode_Pagamento")]
         public void Gerar_QRCode_Pagamento()
         {
@@ -112,6 +112,37 @@ namespace Fiap.McTech.Payments.BDD.Features
             this.ScenarioCleanup();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Atualizar_Pagamento")]
+        [Xunit.TraitAttribute("FeatureTitle", "Ações de gerar e atualizar um pagamento")]
+        [Xunit.TraitAttribute("Description", "Atualizar_Pagamento")]
+        public void Atualizar_Pagamento()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Atualizar_Pagamento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 9
+  testRunner.Given("que o status informado para o pagamento é inválido", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 10
+  testRunner.When("eu solicitar para atualizar o pagamento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 11
+  testRunner.Then("o sistema irá retornar erro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
@@ -119,12 +150,12 @@ namespace Fiap.McTech.Payments.BDD.Features
             
             public FixtureData()
             {
-                GerarQR_CodeParaPagamentoFeature.FeatureSetup();
+                AcoesDeGerarEAtualizarUmPagamentoFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                GerarQR_CodeParaPagamentoFeature.FeatureTearDown();
+                AcoesDeGerarEAtualizarUmPagamentoFeature.FeatureTearDown();
             }
         }
     }

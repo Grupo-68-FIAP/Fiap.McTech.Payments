@@ -1,28 +1,24 @@
 using Fiap.McTech.Payments.Application.Dtos;
 using Fiap.McTech.Payments.Application.Interfaces;
+using Fiap.McTech.Payments.CrossCutting.Exceptions;
 using Fiap.McTech.Payments.Presentation.API.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System;
-using TechTalk.SpecFlow;
 
-namespace MyNamespace
+namespace Fiap.McTech.Payments.BDD.StepDefinition
 {
     [Binding]
-    public class PaymentsStepDefinitions
+    public class PaymentsStepDefinitions_Feature_01
     {
         private PaymentRequestInput _modelInput = default;
         private Guid _orderId;
         private IActionResult _response = default;
 
-        private readonly ScenarioContext _scenarioContext;
-        private readonly PaymentController _paymentController;
+        private PaymentController _paymentController;
         private readonly Mock<IPaymentsAppService> _mockPaymentAppService;
 
-        public PaymentsStepDefinitions(ScenarioContext scenarioContext)
+        public PaymentsStepDefinitions_Feature_01()
         {
-            _scenarioContext = scenarioContext;
-
             _mockPaymentAppService = new Mock<IPaymentsAppService>();
             _paymentController = new PaymentController(_mockPaymentAppService.Object);
         }
@@ -75,15 +71,14 @@ namespace MyNamespace
         {
             // Verifica se a resposta é 200 OK
             var okResult = Assert.IsType<OkObjectResult>(_response);
-            
+
             Assert.NotNull(okResult);
             Assert.NotNull(okResult.Value);
 
             // Extrai o corpo da resposta
-            var responseBody = okResult.Value as GenerateQRCodeResultDto;           
+            var responseBody = okResult.Value as GenerateQRCodeResultDto;
             Assert.NotNull(responseBody?.QRCode);
         }
-
 
         //
         //

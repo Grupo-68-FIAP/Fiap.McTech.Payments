@@ -6,6 +6,7 @@ using Fiap.McTech.Payments.Domain.Enums;
 using Fiap.McTech.Payments.Domain.Interfaces.ExternalServices;
 using Fiap.McTech.Payments.Domain.Interfaces.Repositories;
 using Microsoft.Extensions.Logging;
+using Fiap.McTech.Payments.CrossCutting.Extensions;
 
 namespace Fiap.McTech.Application.AppServices.Payment
 {
@@ -75,6 +76,13 @@ namespace Fiap.McTech.Application.AppServices.Payment
         public async Task<PaymentOutputDto> UpdatePayment(Guid paymentId, string status)
         {
             _logger.LogInformation("Processing payment for order with ID {PaymentId}.", paymentId);
+
+            var statusEnum = EnumExtensions.GetFromDescription(status, typeof(PaymentStatus));
+
+            if (statusEnum == -1)
+            {
+                throw new EntityValidationException("Invalid Payment Status");
+            }
 
             var payment = await _paymentRepository.GetByIdAsync(paymentId);
             if (payment == null)

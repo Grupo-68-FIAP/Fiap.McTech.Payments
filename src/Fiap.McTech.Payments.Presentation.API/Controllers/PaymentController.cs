@@ -65,11 +65,18 @@ namespace Fiap.McTech.Payments.Presentation.API.Controllers
         [Authorize]
         public async Task<IActionResult> UpdatePayment([FromRoute] Guid paymentId, [FromBody] string status)
         {
-            var paymentResult = await _paymentAppService.UpdatePayment(paymentId, status);
-            if (!paymentResult.Success)
-                return BadRequest(new { message = paymentResult.Message });
+            try
+            {
+                var paymentResult = await _paymentAppService.UpdatePayment(paymentId, status);
+                if (!paymentResult.Success)
+                    return BadRequest(paymentResult.Message);
 
-            return Ok(paymentResult);
+                return Ok(paymentResult);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
