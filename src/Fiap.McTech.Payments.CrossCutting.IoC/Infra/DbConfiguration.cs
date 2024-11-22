@@ -75,15 +75,15 @@ namespace Fiap.McTech.Payments.CrossCutting.IoC.Infra.Context
             if (!dbContext.Database.CanConnect())
             {
                 logger.LogWarning("Database {DbName} not found! Creating the database.", dbContext.Database.GetDbConnection().Database);
-                dbContext.Database.Migrate();
+                //dbContext.Database.Migrate();
             }
 
-            var pendingMigrations = dbContext.Database.GetPendingMigrations();
-            if (pendingMigrations.Any())
-            {
-                logger.LogWarning("There are {Count} migrations that haven't been run yet. Updating the database.", pendingMigrations.Count());
-                dbContext.Database.Migrate();
-            }
+            //var pendingMigrations = dbContext.Database.GetPendingMigrations();
+            //if (pendingMigrations.Any())
+            //{
+            //    logger.LogWarning("There are {Count} migrations that haven't been run yet. Updating the database.", pendingMigrations.Count());
+            //    dbContext.Database.Migrate();
+            //}
 
             logger.LogInformation("Database is prepared.");
         }
