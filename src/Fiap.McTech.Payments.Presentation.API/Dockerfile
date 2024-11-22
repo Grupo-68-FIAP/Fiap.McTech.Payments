@@ -22,7 +22,9 @@ COPY ["src/Fiap.McTech.Payments.CrossCutting.IoC/Fiap.McTech.Payments.CrossCutti
 COPY ["src/Fiap.McTech.Payments.Infra/Fiap.McTech.Payments.Infra.csproj", "src/Fiap.McTech.Payments.Infra/"]
 RUN dotnet restore "./src/Fiap.McTech.Payments.Presentation.API/Fiap.McTech.Payments.Presentation.API.csproj"
 WORKDIR "/src/src/Fiap.McTech.Payments.Presentation.API"
-RUN dotnet build "./Fiap.McTech.Payments.Presentation.API.csproj" -c "$BUILD_CONFIGURATION" -o /app/build
+RUN dotnet build "./Fiap.McTech.Payments.Presentation.API.csproj" \
+	-c "$BUILD_CONFIGURATION" \
+	-o /app/build
 
 # Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
 FROM build AS publish
