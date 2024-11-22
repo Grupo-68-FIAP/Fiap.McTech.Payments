@@ -21,14 +21,13 @@ COPY ["src/Fiap.McTech.Payments.ExternalService.WebAPI/Fiap.McTech.Payments.Exte
 COPY ["src/Fiap.McTech.Payments.CrossCutting.IoC/Fiap.McTech.Payments.CrossCutting.IoC.csproj", "src/Fiap.McTech.Payments.CrossCutting.IoC/"]
 COPY ["src/Fiap.McTech.Payments.Infra/Fiap.McTech.Payments.Infra.csproj", "src/Fiap.McTech.Payments.Infra/"]
 RUN dotnet restore "./src/Fiap.McTech.Payments.Presentation.API/Fiap.McTech.Payments.Presentation.API.csproj"
-COPY . .
 WORKDIR "/src/src/Fiap.McTech.Payments.Presentation.API"
-RUN dotnet build "./Fiap.McTech.Payments.Presentation.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./Fiap.McTech.Payments.Presentation.API.csproj" -c "$BUILD_CONFIGURATION" -o /app/build
 
 # Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Fiap.McTech.Payments.Presentation.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Fiap.McTech.Payments.Presentation.API.csproj" -c "$BUILD_CONFIGURATION" -o /app/publish /p:UseAppHost=false
 
 # Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
 FROM base AS final
