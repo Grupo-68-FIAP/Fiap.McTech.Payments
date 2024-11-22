@@ -5,29 +5,31 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5CBF8AF8-2D31-448B-B4AE-10ADA6E78BF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Application", "src\Fiap.McTech.Payments.Application\Fiap.McTech.Payments.Application.csproj", "{20395880-CF38-4659-8B49-7E6589057E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Application", "src\Fiap.McTech.Payments.Application\Fiap.McTech.Payments.Application.csproj", "{20395880-CF38-4659-8B49-7E6589057E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.CrossCutting.IoC", "src\Fiap.McTech.Payments.CrossCutting.IoC\Fiap.McTech.Payments.CrossCutting.IoC.csproj", "{51BC65CD-A5F9-41C2-8EAA-848A1DCEA96D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.CrossCutting.IoC", "src\Fiap.McTech.Payments.CrossCutting.IoC\Fiap.McTech.Payments.CrossCutting.IoC.csproj", "{51BC65CD-A5F9-41C2-8EAA-848A1DCEA96D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Domain", "src\Fiap.McTech.Payments.Domain\Fiap.McTech.Payments.Domain.csproj", "{C80C9DD1-C08E-4B80-B9D4-B86854204D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Domain", "src\Fiap.McTech.Payments.Domain\Fiap.McTech.Payments.Domain.csproj", "{C80C9DD1-C08E-4B80-B9D4-B86854204D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.ExternalService.WebAPI", "src\Fiap.McTech.Payments.ExternalService.WebAPI\Fiap.McTech.Payments.ExternalService.WebAPI.csproj", "{6525D873-D72E-4619-ABF9-E18386F93632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.ExternalService.WebAPI", "src\Fiap.McTech.Payments.ExternalService.WebAPI\Fiap.McTech.Payments.ExternalService.WebAPI.csproj", "{6525D873-D72E-4619-ABF9-E18386F93632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Infra", "src\Fiap.McTech.Payments.Infra\Fiap.McTech.Payments.Infra.csproj", "{D873F724-F315-40BD-B345-698AB4631661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Infra", "src\Fiap.McTech.Payments.Infra\Fiap.McTech.Payments.Infra.csproj", "{D873F724-F315-40BD-B345-698AB4631661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.CrossCutting", "src\Fiap.McTech.Payments.CrossCutting\Fiap.McTech.Payments.CrossCutting.csproj", "{9A34B30F-0961-4356-A0E8-D1F40A0C0F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.CrossCutting", "src\Fiap.McTech.Payments.CrossCutting\Fiap.McTech.Payments.CrossCutting.csproj", "{9A34B30F-0961-4356-A0E8-D1F40A0C0F62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Presentation.API", "src\Fiap.McTech.Payments.Presentation.API\Fiap.McTech.Payments.Presentation.API.csproj", "{5620DC96-B2BE-48E8-A2B6-0D1E052834FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Presentation.API", "src\Fiap.McTech.Payments.Presentation.API\Fiap.McTech.Payments.Presentation.API.csproj", "{5620DC96-B2BE-48E8-A2B6-0D1E052834FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{06EED5C7-885B-4612-AD90-925C9A0E9829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Presentation.API.UnitTests", "tests\Fiap.McTech.Payments.Presentation.API.UnitTests\Fiap.McTech.Payments.Presentation.API.UnitTests.csproj", "{C2F52E9F-77C8-406F-ACEF-69EA68C5C03E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Presentation.API.UnitTests", "tests\Fiap.McTech.Payments.Presentation.API.UnitTests\Fiap.McTech.Payments.Presentation.API.UnitTests.csproj", "{C2F52E9F-77C8-406F-ACEF-69EA68C5C03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.Infra.UnitTests", "tests\Fiap.McTech.Payments.Infra.UnitTests\Fiap.McTech.Payments.Infra.UnitTests.csproj", "{5D975353-9118-4606-8DF8-FA357F0A27C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.Infra.UnitTests", "tests\Fiap.McTech.Payments.Infra.UnitTests\Fiap.McTech.Payments.Infra.UnitTests.csproj", "{5D975353-9118-4606-8DF8-FA357F0A27C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.UnitTests", "tests\Fiap.McTech.Payments.UnitTests\Fiap.McTech.Payments.UnitTests.csproj", "{F185E3CF-4022-4516-BA20-A8B86713DA93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.UnitTests", "tests\Fiap.McTech.Payments.UnitTests\Fiap.McTech.Payments.UnitTests.csproj", "{F185E3CF-4022-4516-BA20-A8B86713DA93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.McTech.Payments.BDD", "tests\Fiap.McTech.Payments.BDD\Fiap.McTech.Payments.BDD.csproj", "{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.BDD", "tests\Fiap.McTech.Payments.BDD\Fiap.McTech.Payments.BDD.csproj", "{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7901A1B0-EBA5-469D-B130-7F900F72CDC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7901A1B0-EBA5-469D-B130-7F900F72CDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7901A1B0-EBA5-469D-B130-7F900F72CDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7901A1B0-EBA5-469D-B130-7F900F72CDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7901A1B0-EBA5-469D-B130-7F900F72CDC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
