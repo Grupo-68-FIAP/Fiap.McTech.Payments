@@ -21,14 +21,15 @@ namespace Fiap.McTech.Payments.Presentation.API.Configurations
                 const string ApiVersion = "v1";
                 c.SwaggerDoc(ApiVersion, new OpenApiInfo
                 {
-                    Title = "McTech API",
+                    Title = "McTech Payments API",
                     Version = ApiVersion,
-                    Description = "Backend API responsible for the operational control of the McTech snack bar. It manages essential functions such as orders, payments, customers, and other operations to ensure efficiency and improvement of the services offered by the McTech snack bar.\n\n" +
+                    Description = "Backend API responsible for the payments of the McTech snack bar. It manages only functions about payments of the services offered by the McTech snack bar.\n\n" +
                                   "### Contacts\n" +
                                   "- **Ervin Notari Junior**: ervinnotari@hotmail.com\n" +
                                   "- **Guilherme Novaes da silva**: guilherme.novaes233@gmail.com\n" +
                                   "- **José Maria dos Reis Lisboa**: josemrlisboa@gmail.com\n" +
-                                  "- **Vanessa Alves do Nascimento**: vanascimento.dev@gmail.com\n"
+                                  "- **Vanessa Alves do Nascimento**: vanascimento.dev@gmail.com\n" +
+                                  "- **Felipe Tomm**: felipe.tomm@gmail.com\n"
                 });
                 c.CustomSchemaIds(type => $"{type.FullName?.Replace($"{type.Namespace}.", "").Replace("+", ".")}");
 
@@ -55,8 +56,8 @@ namespace Fiap.McTech.Payments.Presentation.API.Configurations
 
                 var xmlFiles = new List<string> {
                     $"{Assembly.GetExecutingAssembly().GetName().Name}.xml",
-                    "Fiap.McTech.Application.xml",
-                    "Fiap.McTech.Domain.xml"
+                    "Fiap.McTech.Payments.Application.xml",
+                    "Fiap.McTech.Payments.Domain.xml"
                 };
 
                 foreach (var xmlFile in xmlFiles)
