@@ -4,7 +4,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:8081
-      CONNECTION_STRING: Server=sqlserver,1433;Initial Catalog=mctech_payments;User Id=sa;Password=${SA_PASSWORD};
+      CONNECTION_STRING: Server=sqlserver,1433;Initial Catalog=mctech_payments;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=true;
       ALLOW_SWAGGER_UI: true
 
       OPENID_AUTHORITY: ${OPENID_AUTHORITY}
@@ -12,7 +12,7 @@ services:
     ports:
       - "8081:8081"
     networks:
-      - local_network 
+      - local_network
       - db_network
 
   sqlserver:
@@ -45,4 +45,4 @@ networks:
 
 volumes:
   sqlserver_data:
-  keycloak_data:  
+  keycloak_data:
