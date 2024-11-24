@@ -8,7 +8,7 @@ namespace Fiap.McTech.Payments.Infra.UnitTests.Repositories
     public abstract class RepositoryBaseUnitTests<TEntity> : IDisposable where TEntity : EntityBase
     {
         protected readonly DbContextOptions<DataContext> _options;
-        protected DataContext? _context;
+        protected DataContext _context;
 
         protected RepositoryBaseUnitTests()
         {

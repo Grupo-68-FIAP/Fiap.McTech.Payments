@@ -3,8 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-
+    <Nullable>disable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -29,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Fiap.McTech.Payments.Application\Fiap.McTech.Payments.Application.csproj" />
+    <ProjectReference Include="..\..\src\Fiap.McTech.Payments.CrossCutting\Fiap.McTech.Payments.CrossCutting.csproj" />
     <ProjectReference Include="..\..\src\Fiap.McTech.Payments.Domain\Fiap.McTech.Payments.Domain.csproj" />
     <ProjectReference Include="..\..\src\Fiap.McTech.Payments.Infra\Fiap.McTech.Payments.Infra.csproj" />
     <ProjectReference Include="..\..\src\Fiap.McTech.Payments.ExternalService.WebAPI\Fiap.McTech.Payments.ExternalService.WebAPI.csproj" />
