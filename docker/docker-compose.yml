@@ -6,8 +6,8 @@ services:
     image: ${DOCKER_REGISTRY-}mctech/api-payments
     build:
       context: .
-      dockerfile: src/Fiap.McTech.Payments.Presentation.API/Dockerfile
-      
+      dockerfile: ../src/Fiap.McTech.Payments.Presentation.API/Dockerfile
+
   sqlserver:
     image: mcr.microsoft.com/mssql/server:latest
     restart: always
@@ -20,4 +20,4 @@ services:
     restart: always
     command: start-dev
     environment:
-        KC_HOSTNAME: keycloak
+      KC_HOSTNAME: keycloak

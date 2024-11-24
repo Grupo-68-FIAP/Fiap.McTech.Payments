@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.UnitTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.McTech.Payments.BDD", "tests\Fiap.McTech.Payments.BDD\Fiap.McTech.Payments.BDD.csproj", "{8057B17D-C8B5-495A-8EA5-6152C34A5FD4}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7901A1B0-EBA5-469D-B130-7F900F72CDC3}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker\docker-compose.dcproj", "{7901A1B0-EBA5-469D-B130-7F900F72CDC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
