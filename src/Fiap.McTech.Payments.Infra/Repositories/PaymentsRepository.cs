@@ -8,9 +8,9 @@ namespace Fiap.McTech.Payments.Infra.Repositories
     {
         public PaymentsRepository(DataContext context) : base(context) { }
 
-        public async Task<Fiap.McTech.Payments.Domain.Entities.Payments> GetByOrderIdAsync(Guid id)
+        public async Task<Fiap.McTech.Payments.Domain.Entities.Payments> GetByOrderIdAsync(Guid orderId)
         {
-            return await _dbSet.FirstOrDefaultAsync(f => f.Id == id);
+            return await _dbSet.FirstOrDefaultAsync(f => f.OrderId == orderId);
         }
     }
 }

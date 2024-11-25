@@ -8,8 +8,8 @@ namespace Fiap.McTech.Payments.Domain.Interfaces.Repositories
         /// <summary>
         /// Asynchronously retrieves a payment by its associated order identifier.
         /// </summary>
-        /// <param name="id">The identifier of the order associated with the payment.</param>
+        /// <param name="orderId">The identifier of the order associated with the payment.</param>
         /// <returns>A task representing the asynchronous operation, containing the payment associated with the specified order identifier, if found; otherwise, null.</returns>
-        Task<Fiap.McTech.Payments.Domain.Entities.Payments> GetByOrderIdAsync(Guid id);
+        Task<Fiap.McTech.Payments.Domain.Entities.Payments> GetByOrderIdAsync(Guid orderId);
     }
 }
