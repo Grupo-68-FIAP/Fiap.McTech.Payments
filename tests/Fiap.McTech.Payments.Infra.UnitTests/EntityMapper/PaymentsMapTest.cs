@@ -6,7 +6,7 @@ namespace Fiap.McTech.Payments.Infra.UnitTests.EntityMapper
 {
     public class PaymentsMapTests
     {
-        private DbContextOptions<DataContext> CreateInMemoryOptions()
+        private static DbContextOptions<DataContext> CreateInMemoryOptions()
         {
             return new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())

@@ -6,7 +6,7 @@ namespace Fiap.McTech.Payments.Infra.UnitTests.Context
 {
     public class DataContextTests
     {
-        private DbContextOptions<DataContext> CreateInMemoryOptions()
+        private static DbContextOptions<DataContext> CreateInMemoryOptions()
         {
             return new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())
