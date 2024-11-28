@@ -34,6 +34,9 @@ spec:
                 secretKeyRef:
                   name: cognito-secrets
                   key: OPENID_AUDIENCE
+          envFrom:
+            - configMapRef:
+                name: mctechpayments-configmap        
           ports:
             - containerPort: 8080
               name: http
