@@ -16,7 +16,6 @@
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5178",
       "environmentVariables": {
-        "CONNECTION_STRING": "Server=localhost,1433;Initial Catalog=mctech_payments;User Id=sa;Password=pws4mctech!;TrustServerCertificate=true;",
         "ASPNETCORE_ENVIRONMENT": "Development",
         "SA_PASSWORD": "pws4mctech!",
         "OPENID_AUTHORITY": "http//keycloak:8080/realms/McTech",
@@ -35,9 +34,9 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "SA_PASSWORD": "pws4mctech!",
         "OPENID_AUTHORITY": "http//keycloak:8080/realms/McTech",
-        "OPENID_AUDIENCE":"mctech-api",
+        "OPENID_AUDIENCE": "mctech-api",
         "KEYCLOAK_ADMIN": "admin",
-        "KEYCLOAK_ADMIN_PASSWORD":"admin",
+        "KEYCLOAK_ADMIN_PASSWORD": "admin",
       }
     },
     "IIS Express": {
