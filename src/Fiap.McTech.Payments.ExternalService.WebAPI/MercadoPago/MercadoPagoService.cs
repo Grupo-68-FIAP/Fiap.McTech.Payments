@@ -51,27 +51,15 @@ namespace Fiap.McTech.Payments.ExternalService.WebAPI.MercadoPago
 
         public async Task<string> GenerateMockPaymentLinkAsync(PaymentRequest request)
         {
-            try
-            {
-                HttpResponseMessage response = mockPaymentResponse();
 
-                response.EnsureSuccessStatusCode();
-                string responseString = await response.Content.ReadAsStringAsync();
+            HttpResponseMessage response = mockPaymentResponse();
 
-                var paymentResponse = JsonSerializer.Deserialize<PaymentResponse>(responseString);
+            response.EnsureSuccessStatusCode();
+            string responseString = await response.Content.ReadAsStringAsync();
 
-                return paymentResponse?.PointOfInteraction?.TransactionData?.TicketUrl ?? throw new InvalidOperationException("Falha ao recuperar o QR code.");
-            }
-            catch (InvalidOperationException httpEx)
-            {
-                _logger.LogError(httpEx, "HTTP error while generating payment link for the amount {Amount}.", request.TransactionAmount);
-                throw new InvalidOperationException("There was a problem communicating with the payment service.", httpEx);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Failed to generate payment link for the amount {Amount}.", request.TransactionAmount);
-                return string.Empty;
-            }
+            var paymentResponse = JsonSerializer.Deserialize<PaymentResponse>(responseString);
+
+            return paymentResponse?.PointOfInteraction?.TransactionData?.TicketUrl ?? throw new InvalidOperationException("Falha ao recuperar o QR code.");
         }
 
         public async Task<bool> ProcessPaymentAsync(Guid paymentId)
