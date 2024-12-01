@@ -48,7 +48,7 @@ namespace Fiap.McTech.UnitTests.AppServices
             };
 
             _mockMercadoPagoService
-                .Setup(service => service.GeneratePaymentLinkAsync(It.IsAny<PaymentRequest>()))
+                .Setup(service => service.GenerateMockPaymentLinkAsync(It.IsAny<PaymentRequest>()))
                 .ReturnsAsync("https://example.com/qrcode");
 
             _mockPaymentRepository

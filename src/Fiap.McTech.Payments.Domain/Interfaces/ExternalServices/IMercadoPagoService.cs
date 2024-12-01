@@ -5,6 +5,7 @@ namespace Fiap.McTech.Payments.Domain.Interfaces.ExternalServices
     public interface IMercadoPagoService
     {
         Task<string> GeneratePaymentLinkAsync(PaymentRequest request);
+        Task<string> GenerateMockPaymentLinkAsync(PaymentRequest request);
         Task<bool> ProcessPaymentAsync(Guid paymentId);
     }
 

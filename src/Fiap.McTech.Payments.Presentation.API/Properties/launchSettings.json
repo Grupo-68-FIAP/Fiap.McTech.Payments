@@ -16,7 +16,12 @@
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5178",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SA_PASSWORD": "pws4mctech!",
+        "OPENID_AUTHORITY": "http//keycloak:8080/realms/McTech",
+        "OPENID_AUDIENCE": "mctech-api",
+        "KEYCLOAK_ADMIN": "admin",
+        "KEYCLOAK_ADMIN_PASSWORD": "admin"
       }
     },
     "https": {
@@ -26,7 +31,12 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7239;http://localhost:5178",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SA_PASSWORD": "pws4mctech!",
+        "OPENID_AUTHORITY": "http//keycloak:8080/realms/McTech",
+        "OPENID_AUDIENCE": "mctech-api",
+        "KEYCLOAK_ADMIN": "admin",
+        "KEYCLOAK_ADMIN_PASSWORD": "admin",
       }
     },
     "IIS Express": {

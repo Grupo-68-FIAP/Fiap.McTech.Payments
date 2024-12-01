@@ -31,23 +31,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CorsConfig", builder => builder.WithOrigins(allowOrigins.Split(';')).AllowAnyMethod().AllowAnyHeader());
 });
 
-
 var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
 scope.McTechDatabaseInitialize();
-
-// Configure the HTTP request pipeline.
-/* if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-} */
-
-//app.UseHttpsRedirection();
-//app.UseAuthorization();
-//app.MapControllers();
-//app.Run();
 
 app.UseSwaggerV3();
 app.UseCors("CorsConfig");
