@@ -91,7 +91,7 @@ namespace Fiap.McTech.Payments.ExternalService.WebAPI.MercadoPago
             }
         }
 
-        private HttpResponseMessage mockPaymentResponse()
+        private static HttpResponseMessage mockPaymentResponse()
         {
             var result = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             result.Content = new StringContent(@"
