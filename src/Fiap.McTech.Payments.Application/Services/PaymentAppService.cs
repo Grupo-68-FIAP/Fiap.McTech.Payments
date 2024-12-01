@@ -47,7 +47,7 @@ namespace Fiap.McTech.Application.AppServices.Payment
 
             _logger.LogInformation("Generating QR code for order with ID {OrderId}.", model.OrderId);
 
-            var paymentLink = await _mercadoPagoService.GeneratePaymentLinkAsync(model.MapPaymentToServiceModel());
+            var paymentLink = await _mercadoPagoService.GenerateMockPaymentLinkAsync(model.MapPaymentToServiceModel());
             if (string.IsNullOrEmpty(paymentLink))
             {
                 _logger.LogInformation("Error to create QrCode for ID {OrderId}.", model.OrderId);
