@@ -107,5 +107,36 @@ namespace Fiap.McTech.UnitTests.Services
             // Assert
             Assert.True(result);
         }
+
+        [Fact]
+        public async Task GenerateMockPaymentLinkAsync_ReturnsTicketUrl_WhenSuccess()
+        {
+            // Arrange
+            var paymentRequest = PaymentServiceFaker.GeneratePaymentRequest();
+            var paymentResponse = PaymentServiceFaker.GeneratePaymentResponse();
+
+            var responseMessage = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(JsonSerializer.Serialize(paymentResponse))
+            };
+
+            var mockHttpMessageHandler = new MockHttpMessageHandler((request, cancellationToken) =>
+            {
+                return Task.FromResult(responseMessage);
+            });
+
+            var httpClient = new HttpClient(mockHttpMessageHandler)
+            {
+                BaseAddress = new Uri("https://api.mercadopago.com/")
+            };
+
+            var service = new MercadoPagoService(_mockLogger.Object, httpClient);
+
+            // Act
+            var result = await service.GenerateMockPaymentLinkAsync(paymentRequest);
+
+            // Assert
+            Assert.NotNull(result);
+        }
     }
 }
